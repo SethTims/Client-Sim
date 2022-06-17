@@ -78,7 +78,7 @@
                   <p><span class="font-weight-bold"> Having trouble paying your license? Click here to see additional payment plan options. </span></p>
                   <a class="buttonsum text-black border-light btn-lg" onclick=" window.open('https://www.tvlicensing.co.uk/faqs/FAQ305','_blank')"> Payment Schemes </a>
                 </span>
-                <span th:unless="${row[8] == 'UNPAID'}" class="_blank"> </span> 
+                <span th:if="${row[8] == 'PAID'}" class="blank"> </span> 
             </div>
           </div>
       </div>
