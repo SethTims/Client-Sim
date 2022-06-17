@@ -22,15 +22,15 @@
       }
 
       code {
-        font-size: 80%;
+        font-size: 90%;
       }
 
       .banner {
-      background-color: darkcyan;
+      background-color: lightskyblue;
       }
 
       .buttonsum{
-        background-color: darkcyan;
+        background-color: lightskyblue;
 
       }
 
@@ -60,21 +60,24 @@
 <main role="main" class="container">
   <h1 class="mt-5 text-center">Sign in using Government Gateway</h1>
   <p></p>
-  <div class="row offset-md-4 ">
+  <p></p>
+  <div class="row offset-md-4">
 
     <div class="col-6">
       <form th:attr="action='/fines'" method="post">
 
 
-        <div class="form-group">
-          <label for="exampleInputEmail1 ">Government Gateway User ID</label>
+        <h4> <div class="form-group">
+          <label for="exampleInputEmail1">Government Gateway User ID</label>
           <input type="email" class="form-control border border-dark rounded-0" name="email" id="email" value="testuser@email.com">
         </div>
+      
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input type="password" class="form-control border border-dark rounded-0" name="password" id="password" value="password">
         </div>
-        <button type="submit" class="btn-lg buttonsum text-white">Sign in</button>
+      </h4>
+        <button type="submit" class="btn-lg buttonsum text-black">Sign in >></button>
         <p></p>
 
         <!--<div class="form-group">
@@ -86,7 +89,7 @@
         
       </form>
     </div>
-
+  
 
   </div>
 </main>
