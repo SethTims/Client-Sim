@@ -58,12 +58,12 @@
             <div class="col">
                 <div class="card-body border border-dark rounded-0 mt-3">
                     <h3 class="mb-3">Penalty Charge Notice</h2>
-                    <p><span class="font-weight-bold">Location: </span><span th:text="' ' + ${fine[2]}"></span></p>
-                    <p><span class="font-weight-bold">Contravention date: </span><span th:text="' ' + ${fine[3]}"></span></p>
-                    <p><span class="font-weight-bold">Contravention time: </span><span th:text="' ' + ${fine[4]}"></span></p>
-                    <p><span class="font-weight-bold">Contravention code: </span><span th:text="' ' + ${fine[5]}"></span></p>
+                    <p><span class="font-weight-bold">Home Details: </span><span th:text="' ' + ${fine[2]}"></span></p>
+                    <p><span class="font-weight-bold">Date of fine: </span><span th:text="' ' + ${fine[3]}"></span></p>
+                    <p><span class="font-weight-bold">Time of fine: </span><span th:text="' ' + ${fine[4]}"></span></p>
+                    <p><span class="font-weight-bold">Fine amount: </span><span th:text="' ' + ${fine[5]}"></span></p>
                     <p><span class="font-weight-bold">Issued by the Civil Enforcement Officer: </span><span th:text="' ' + ${fine[6]}"></span></p>
-                    <p><span class="font-weight-bold">Parking contravention: </span><span th:text="' ' + ${fine[7]}"></span></p>
+                    <p><span class="font-weight-bold">Fine information: </span><span th:text="' ' + ${fine[7]}"></span></p>
                     <hr />
                     <form th:attr="action='/pay'" method="post">
                         <input type="hidden" th:value="${fine[0]}" name="id">
@@ -114,8 +114,8 @@
                                 <img th:src="@{../images/cc.png}" width="160" />
                             </div>
                         </div>
-                        <button th:if="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="buttonsum border border-dark rounded-0">Pay &#163;130</button>
-                        <button th:unless="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="buttonsum border border-dark rounded-0">Pay &#163;65</button>
+                        <button th:if="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class=" btn-lg buttonsum border border-dark rounded-0">Pay &#163;130</button>
+                        <button th:unless="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="btn-lg buttonsum border border-dark rounded-0">Pay &#163;65</button>
                     </div>
                 </form> 
             </div>
