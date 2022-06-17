@@ -30,7 +30,7 @@
             }
       
             .buttonsum{
-              background-color: darkcyan;
+              background-color: darkgoldenrod;
               
       
             }
@@ -68,7 +68,7 @@
                       <p><span class="font-weight-bold">Issued by the Civil Enforcement Officer: </span><span th:text="' ' + ${row[6]}"></span></p>
                       <p><span class="font-weight-bold">Fine information: </span><span th:text="' ' + ${row[7]}"></span></p>
                       <a th:if="${row[8] == 'UNPAID'}" th:href="@{/fine(id=${row[0]})}" class="buttonsum text-white border-light btn-lg">Pay now</a>
-                      <div th:unless="${row[8] == 'UNPAID'}" class="alert alert-secondary" role="alert">Thank you, this fine has been paid.</div>
+                      <div th:unless="${row[8] == 'UNPAID'}" class="alert alert-secondary" role="alert"><b>Thank you, this fine has been paid.</b></div>
                   </div>
               </div>
           </div>
