@@ -75,8 +75,8 @@
               </div>
               <div th:each="row, iterStat: ${userfines}" class="card">
                 <div class="card-body border border-dark rounded-0 mb-3">
-                  <p><span class="font-weight-bold"> Having trouble paying your license> Click here to see additional payment plan options. </span></p>
-                  <a class="buttonsum text-black border-light btn-lg" href="https://www.tvlicensing.co.uk/faqs/FAQ305"> Payment Schemes</a>
+                  <p><span class="font-weight-bold"> Having trouble paying your license? Click here to see additional payment plan options. </span></p>
+                  <a th:if="${row[8] == 'UNPAID'}" th:href="@{/fine(id=${row[0]})}" class="buttonsum text-black border-light btn-lg" href="https://www.tvlicensing.co.uk/faqs/FAQ305" target="_blank"> Payment Schemes </a>
                 </div>
             </div>
           </div>
