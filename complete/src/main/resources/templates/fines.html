@@ -71,6 +71,12 @@
                       <div th:unless="${row[8] == 'UNPAID'}" class="alert alert-secondary" role="alert"><b>Thank you, this fine has been paid.</b></div>
                   </div>
               </div>
+              <div th:each="row, iterStat: ${userfines}" class="card">
+                <div class="card-body border border-dark rounded-0 mb-3">
+                  <p><span class="font-weight-bold"> Having trouble paying your license> Click here to see additional payment plan options. </span></p>
+                  <a class="buttonsum text-black border-light btn-lg" href="https://www.tvlicensing.co.uk/faqs/FAQ305"> Payment Schemes</a>
+                </div>
+            </div>
           </div>
       </div>
   </main>
