@@ -74,11 +74,11 @@
                   </div>
               </div>
               <div th:each="row, iterStat: ${userfines}" class="card">
-                <div th:if="${row[8] == 'UNPAID'}" th:href="@{/fine(id=${row[0]})}" class="card-body border border-dark rounded-0 mb-3">
+                <span th:if="${row[8] == 'UNPAID'}" th:href="@{/fine(id=${row[0]})}" class="card-body border border-dark rounded-0 mb-3">
                   <p><span class="font-weight-bold"> Having trouble paying your license? Click here to see additional payment plan options. </span></p>
                   <a class="buttonsum text-black border-light btn-lg" onclick=" window.open('https://www.tvlicensing.co.uk/faqs/FAQ305','_blank')"> Payment Schemes </a>
-                </div>
-                <div th:unless="${row[8] == 'UNPAID'}" class="card-body"> </div> 
+                </span>
+                <span th:unless="${row[8] == 'UNPAID'}" class="_blank"> </span> 
             </div>
           </div>
       </div>
