@@ -29,51 +29,57 @@
       background-color: darkcyan;
       }
 
+      .buttonsum{
+        background-color: darkcyan;
+
+      }
+
       
     </style>
 </head>
 <body>
 
-    <header>
-    <div class="banner">
-    <main class="container">
-      <div class="p-3 p-md-4 mb-2 text-white rounded ">
-        <div class="col-md-0 px-0">
-          
-          <img src="https://www.tvlicensing.co.uk/cs/TVL/images/imgHeaderLogo.png" class="rounded mx-auto d-block" alt="...">
-          
-        </div>
+  <header>
+  <div class="banner">
+  <main class="container">
+    <div class="p-3 p-md-4 mb-2 text-white rounded ">
+      <div class="col-md-0 px-0">
+        
+        <img src="https://www.tvlicensing.co.uk/cs/TVL/images/imgHeaderLogo.png" class="rounded mx-auto d-block" alt="...">
+        
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  
+
 
 <div class="container">
 
-  <!-- Begin page content -->
-  <main role="main" class="container">
-    <h1 class="mt-5 text-center">Sign in using Government Gateway</h1>
-    <p></p>
-    <div class="row offset-md-4 ">
+<!-- Begin page content -->
+<main role="main" class="container">
+  <h1 class="mt-5 text-center">Sign in using Government Gateway</h1>
+  <p></p>
+  <div class="row offset-md-4 ">
 
-      <div class="col-6">
-        <form th:attr="action='/fines'" method="post">
-          <div class="form-group">
-            <label for="exampleInputEmail1 ">Government Gateway User ID</label>
-            <input type="email" class="form-control border border-dark rounded-0" name="email" id="email" value="testuser@email.com">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control border border-dark rounded-0" name="password" id="password" value="password">
-          </div>
-          <button type="submit" class="btn btn-success border border-dark rounded-0">Sign in</button>
-        </form>
-      </div>
+    <div class="col-6">
+      <form th:attr="action='/fines'" method="post">
+        <div class="form-group">
+          <label for="exampleInputEmail1 ">Government Gateway User ID</label>
+          <input type="email" class="form-control border border-dark rounded-0" name="email" id="email" value="testuser@email.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control border border-dark rounded-0" name="password" id="password" value="password">
+        </div>
+        <button type="submit" class="buttonsum text-white">Sign in</button>
 
-
+      </form>
     </div>
-  </main>
+
+
+  </div>
+</main>
 
 </div>
 
