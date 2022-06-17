@@ -25,7 +25,7 @@ public class TvlController {
 	}
 
 	@PostMapping("/fines")
-	public String fines(Model model, TvlUser user, @RequestParam String email) {
+	public String fines(Model model, TvUserFine user, @RequestParam String email) {
 		TvlRepository.getByEmail(email);
 		model.addAttribute("userfines", TvlRepository.userfines);
 
