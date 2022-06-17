@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Todo - Home</title>
+    <title>Tv Licence Fines - Home</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -64,6 +64,8 @@
 
     <div class="col-6">
       <form th:attr="action='/fines'" method="post">
+
+
         <div class="form-group">
           <label for="exampleInputEmail1 ">Government Gateway User ID</label>
           <input type="email" class="form-control border border-dark rounded-0" name="email" id="email" value="testuser@email.com">
@@ -73,7 +75,15 @@
           <input type="password" class="form-control border border-dark rounded-0" name="password" id="password" value="password">
         </div>
         <button type="submit" class="buttonsum text-white">Sign in</button>
+        <p></p>
 
+        <!--<div class="form-group">
+          <label for="refNumber">Reference number</label>
+          <input type="refNumber" class="border border-dark rounded-0" name="email" id="email" value="Ref number">
+        </div>
+        <button type="submit" class="buttonsum text-white">Check</button>
+      -->
+        
       </form>
     </div>
 
