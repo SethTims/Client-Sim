@@ -17,14 +17,14 @@ public class Application {
 
 		// Add a user to the userstore for testing
 		ArrayList<String> newUser = new ArrayList<String>();
-		newUser.add("testuser2@email.com");
+		newUser.add("JohnDoe@email.com");
 		newUser.add("password");
 		TvlRepository.userstore.add(newUser);
 
 		// Add a fine to the finestore for testing
 		ArrayList<String> newFine1 = new ArrayList<String>();
 		newFine1.add("1"); // Id
-		newFine1.add("testuser@email.com"); // User
+		newFine1.add("JohnDoe@email.com"); // User
 		newFine1.add("152 Winchester Street,  BT1 4JQ"); // Location
 		newFine1.add("09/05/2022"); // Contravention date
 		newFine1.add("12:39pm"); // Contravention time
