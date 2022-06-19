@@ -116,8 +116,8 @@
                                 <img th:src="@{../images/cc.png}" width="160" />
                             </div>
                         </div>
-                        <button th:if="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class=" btn-lg buttonsum border border-dark rounded-0">Pay &#163;60</button>
-                        <button th:unless="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="btn-lg buttonsum border border-dark rounded-0">Pay &#163;65</button>
+                        <button th:if="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="btn-lg buttonsum text-black ">Pay &#163;60</button>
+                        <button th:unless="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="btn-lg buttonsum text-black">Pay &#163;60</button>
                     </div>
                 </form>
                 <div th:each="row, iterStat: ${userfines}" class="card">

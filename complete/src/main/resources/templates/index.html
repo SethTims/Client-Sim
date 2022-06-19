@@ -31,6 +31,7 @@
 
       .buttonsum{
         background-color: lightskyblue;
+        color:black;
 
       }
 
@@ -61,15 +62,15 @@
   <h1 class="mt-5 text-center">Sign in using Government Gateway</h1>
   <p></p>
   <p></p>
-  <div class="row offset-md-4">
+  <div class="row offset-md-3">
 
-    <div class="col-6">
+    <div class="col-8">
       <form th:attr="action='/fines'" method="post">
 
 
         <h4> <div class="form-group">
           <label for="exampleInputEmail1">Government Gateway User ID</label>
-          <input type="email" class="form-control border border-dark rounded-0" name="email" id="email" value="testuser@email.com">
+          <input type="email" class="form-control border border-dark rounded-0" name="email" id="email" value="JohnDoe@email.com">
         </div>
       
         <div class="form-group">
@@ -79,6 +80,13 @@
       </h4>
         <button type="submit" class="btn-lg buttonsum text-black">Sign in >></button>
         <p></p>
+        <p></p>
+        <div></div>
+
+        <div class="card-body border border-dark rounded-0 mb-3">
+          <p><span class="font-center"> For more information on why you need a TV licence click the button below </span></p>
+          <a class="buttonsum border-light btn-lg" href="https://www.tvlicensing.co.uk/check-if-you-need-one?&WT.mc_id=mec_Search_Brand&gclid=Cj0KCQjwzLCVBhD3ARIsAPKYTcR5fMigjPNZVIxjO17bKByX8Mgc64GHwnTUidZh3YZYSuMV9RJIeHUaAt8tEALw_wcB&gclsrc=aw.ds" target="_blank"> Why I need a license</a>
+        </div>
 
         <!--<div class="form-group">
           <label for="refNumber">Reference number</label>
