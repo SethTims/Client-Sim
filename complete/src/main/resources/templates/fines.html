@@ -61,13 +61,15 @@
               <div th:each="row, iterStat: ${userfines}" class="card">
                   <div class="card-body border border-dark rounded-0 mb-3">
                       <h3 class="mb-3">Tv Licensing Fine Details</h2>
-                        <h4> 
-                      <p><span class="font-weight-bold">Home details: </span><span th:text="' ' + ${row[2]}"></span></p>
-                      <p><span class="font-weight-bold">Date of fine: </span><span th:text="' ' + ${row[3]}"></span></p>
-                      <p><span class="font-weight-bold">Time of fine: </span><span th:text="' ' + ${row[4]}"></span></p>
+                        <h4>
                       <p><span class="font-weight-bold">Fine amount: </span><span th:text="' ' + ${row[5]}"></span></p>
-                      <p><span class="font-weight-bold">Issued by the Civil Enforcement Officer: </span><span th:text="' ' + ${row[6]}"></span></p>
                       <p><span class="font-weight-bold">Fine information: </span><span th:text="' ' + ${row[7]}"></span></p>
+                      <p><span class="font-weight-bold">Date of fine issued: </span><span th:text="' ' + ${row[3]}"></span></p>
+                      <p><span class="font-weight-bold">Time of fine issued: </span><span th:text="' ' + ${row[4]}"></span></p>
+                      <p><span class="font-weight-bold">Home details: </span><span th:text="' ' + ${row[2]}"></span></p>
+                     
+                      
+                      
                       <a th:if="${row[8] == 'UNPAID'}" th:href="@{/fine(id=${row[0]})}" class="buttonsum border-light btn-lg">Pay now £</a>
                       <div th:unless="${row[8] == 'UNPAID'}" class="buttonsum alert alert-secondary" role="alert">Thank you, this fine has been paid.</div>
                         </h4>
@@ -76,7 +78,7 @@
               <div th:each="row, iterStat: ${userfines}" class="card">
                 <div th:if="${row[8] == 'UNPAID'}" class="card-body border border-dark rounded-0 mb-3">
                   <p>
-                      <span th:if="${row[8] == 'UNPAID'}" class="font-weight-bold"> Having trouble paying your license > Click here to see additional payment plan options. </span></p>
+                      <span th:if="${row[8] == 'UNPAID'}" class="font-weight-bold"> Having trouble paying your license? Click below to see additional payment plan options. </span></p>
                       <a th:if="${row[8] == 'UNPAID'}" th:href="@{/fine(id=${row[0]})}">
                   <a th:if="${row[8] == 'UNPAID'}" class="buttonsum text-black border-light btn-lg" href="https://www.tvlicensing.co.uk/faqs/FAQ305" target="_blank"> Payment Schemes</a>
                  
