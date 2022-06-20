@@ -59,12 +59,14 @@
                 <div class="card-body border border-dark rounded-0 mt-3">
                     <h3 class="mb-3">Tv Fine Payment</h2>
                       <h4> 
-                    <p><span class="font-weight-bold">Home Details: </span><span th:text="' ' + ${fine[2]}"></span></p>
-                    <p><span class="font-weight-bold">Date of fine: </span><span th:text="' ' + ${fine[3]}"></span></p>
-                    <p><span class="font-weight-bold">Time of fine: </span><span th:text="' ' + ${fine[4]}"></span></p>
-                    <p><span class="font-weight-bold">Fine amount: </span><span th:text="' ' + ${fine[5]}"></span></p>
-                    <p><span class="font-weight-bold">Issued by the Civil Enforcement Officer: </span><span th:text="' ' + ${fine[6]}"></span></p>
-                    <p><span class="font-weight-bold">Fine information: </span><span th:text="' ' + ${fine[7]}"></span></p>
+                    
+                        <p><span class="font-weight-bold">Fine amount: </span><span th:text="' ' + ${fine[5]}"></span></p>
+                        <p><span class="font-weight-bold">Fine information: </span><span th:text="' ' + ${fine[7]}"></span></p>
+                        <p><span class="font-weight-bold">Date of fine issued: </span><span th:text="' ' + ${fine[3]}"></span></p>
+                        <p><span class="font-weight-bold">Time of fine issued: </span><span th:text="' ' + ${fine[4]}"></span></p>
+                        <p><span class="font-weight-bold">Home details: </span><span th:text="' ' + ${fine[2]}"></span></p>
+                       
+
                   </h4>
                     <hr />
                     <form th:attr="action='/pay'" method="post">
