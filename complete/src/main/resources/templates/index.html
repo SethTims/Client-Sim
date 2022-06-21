@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Todo - Home</title>
+    <title>Tv Licence Fines - Home</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -22,15 +22,16 @@
       }
 
       code {
-        font-size: 80%;
+        font-size: 90%;
       }
 
       .banner {
-      background-color: darkcyan;
+      background-color: lightskyblue;
       }
 
       .buttonsum{
-        background-color: darkcyan;
+        background-color: lightskyblue;
+        color:black;
 
       }
 
@@ -52,7 +53,7 @@
   </div>
 </header>
 
-
+<!--comment-->
 
 <div class="container">
 
@@ -60,23 +61,56 @@
 <main role="main" class="container">
   <h1 class="mt-5 text-center">Sign in using Government Gateway</h1>
   <p></p>
-  <div class="row offset-md-4 ">
+  
+  <div class="row offset-md-3">
 
-    <div class="col-6">
+    <div class="col-8">
       <form th:attr="action='/fines'" method="post">
-        <div class="form-group">
-          <label for="exampleInputEmail1 ">Government Gateway User ID</label>
-          <input type="email" class="form-control border border-dark rounded-0" name="email" id="email" value="testuser@email.com">
+
+
+        <h4> <div class="form-group">
+          <label for="exampleInputEmail1">Government Gateway User ID</label>
+          <input type="email" class="form-control border border-dark rounded-0" name="email" id="email" value="JohnDoe@email.com">
         </div>
+      
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input type="password" class="form-control border border-dark rounded-0" name="password" id="password" value="password">
         </div>
-        <button type="submit" class="buttonsum text-white">Sign in</button>
+      </h4>
+        <button type="submit" class="btn-lg buttonsum text-black">Sign in >></button>
+        <p></p>
+        <p></p>
+        <div></div>
 
+        <div class="card-body border border-dark rounded-0 mb-3">
+          <p><span class="font-center">Don't have a Gateway Id?</span></p>
+          <a class="buttonsum border-light btn-lg" href="https://www.sign-in.service.gov.uk/getting-started" target="_blank">Click here to sign up</a>
+          
+        </div>
+
+        <div></div>
+        <div></div>
+
+        <div class="card-body border border-dark rounded-0 mb-3">
+          <p><span class="font-center"> For more information on why you need a TV licence click the button below </span></p>
+          <a class="buttonsum border-light btn-lg" href="https://www.tvlicensing.co.uk/check-if-you-need-one?&WT.mc_id=mec_Search_Brand&gclid=Cj0KCQjwzLCVBhD3ARIsAPKYTcR5fMigjPNZVIxjO17bKByX8Mgc64GHwnTUidZh3YZYSuMV9RJIeHUaAt8tEALw_wcB&gclsrc=aw.ds" target="_blank"> Why I need a license</a>
+        </div>
+
+       
+
+     
+
+        <!--<div class="form-group">
+          <label for="refNumber">Reference number</label>
+          <input type="refNumber" class="border border-dark rounded-0" name="email" id="email" value="Ref number">
+        </div>
+        <button type="submit" class="buttonsum text-white">Check</button>
+      -->
+        
       </form>
     </div>
-
+  
 
   </div>
 </main>

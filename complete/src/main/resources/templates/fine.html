@@ -2,61 +2,94 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Todo - New Todo</title>
+    <title>Pay your TV Licence Fine - Payment Details</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-</head>
+
+          <style type="text/css">
+            /* Custom page CSS
+            -------------------------------------------------- */
+            /* Not required for template or sticky footer method. */
+      <!--Test--> 
+            body > .container {
+              padding: 60px 15px 0;
+            }
+      
+            .footer > .container {
+              padding-right: 15px;
+              padding-left: 15px;
+            }
+      
+            code {
+              font-size: 80%;
+            }
+      
+            .banner {
+            background-color: lightskyblue;
+            }
+      
+            .buttonsum{
+              background-color: lightskyblue;
+              color: black;
+      
+            }
+      
+            
+          </style>
+      </head>
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a class="navbar-brand" href="/">GOV.UK</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/fines">Home</a>
-                    </li>
-                </ul>
+        <div class="banner">
+        <main class="container">
+          <div class="p-3 p-md-4 mb-2 text-white rounded ">
+            <div class="col-md-0 px-0">
+              
+              <img src="https://www.tvlicensing.co.uk/cs/TVL/images/imgHeaderLogo.png" class="rounded mx-auto d-block" alt="...">
+              
             </div>
-        </nav>
-    </header>
+          </div>
+        </div>
+      </header>
 
     <main class="container">
         <div class="row">
             <div class="col">
                 <div class="card-body border border-dark rounded-0 mt-3">
-                    <h3 class="mb-3">Penalty Charge Notice</h2>
-                    <p><span class="font-weight-bold">Location: </span><span th:text="' ' + ${fine[2]}"></span></p>
-                    <p><span class="font-weight-bold">Contravention date: </span><span th:text="' ' + ${fine[3]}"></span></p>
-                    <p><span class="font-weight-bold">Contravention time: </span><span th:text="' ' + ${fine[4]}"></span></p>
-                    <p><span class="font-weight-bold">Contravention code: </span><span th:text="' ' + ${fine[5]}"></span></p>
-                    <p><span class="font-weight-bold">Issued by the Civil Enforcement Officer: </span><span th:text="' ' + ${fine[6]}"></span></p>
-                    <p><span class="font-weight-bold">Parking contravention: </span><span th:text="' ' + ${fine[7]}"></span></p>
+                    <h3 class="mb-3">Tv Fine Payment</h2>
+                      <h4> 
+                    
+                        <p><span class="font-weight-bold">Fine amount: </span><span th:text="' ' + ${fine[5]}"></span></p>
+                        <p><span class="font-weight-bold">Fine information: </span><span th:text="' ' + ${fine[7]}"></span></p>
+                        <p><span class="font-weight-bold">Date of fine issued: </span><span th:text="' ' + ${fine[3]}"></span></p>
+                        <p><span class="font-weight-bold">Time of fine issued: </span><span th:text="' ' + ${fine[4]}"></span></p>
+                        <p><span class="font-weight-bold">Home details: </span><span th:text="' ' + ${fine[2]}"></span></p>
+                       
+
+                  </h4>
                     <hr />
                     <form th:attr="action='/pay'" method="post">
                         <input type="hidden" th:value="${fine[0]}" name="id">
                         <div class="row">
                             <div class="form-group col-sm-5">
-                            <label for="owner">Owner</label>
-                            <input type="text" class="form-control border border-dark rounded-0" name="owner" id="owner" value="Mr T User">
+                            <h4><label for="owner">Owner</label></h4>
+                            <input type="text" class="form-control border border-dark rounded-0" name="owner" id="owner" value="Mr John Doe">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-3">
-                                <label for="card-number">Card Number</label>
-                                <input type="text" class="form-control border border-dark rounded-0" name="card-number" id="card-number" value="1111-1111-1111-1111">
+                                <h4><label for="card-number">Card Number</label></h4>
+                                <input type="text" class="form-control border border-dark rounded-0" name="card-number" id="card-number" value="1234-5678-9123-4567">
                             </div>
                             <div class="form-group col-sm-2">
-                                <label for="cvv">CVV</label>
+                                <h4><label for="cvv">CVV</label></h4>
                                 <input type="text" class="form-control border border-dark rounded-0" name="cvv" id="cvv" value="123">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-1">
-                                <label for="card-month">Month</label>
+                                <h4><label for="card-month">Month</label></h4>
                                 <select class="form-control" id="card-month">
                                     <option>1</option>
                                     <option>2</option>
@@ -73,7 +106,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-sm-2">
-                                <label for="card-year">Year</label>
+                                <h4><label for="card-year">Year</label></h4>
                                 <select class="form-control" id="card-year">
                                     <option>2022</option>
                                     <option>2023</option>
@@ -85,10 +118,16 @@
                                 <img th:src="@{../images/cc.png}" width="160" />
                             </div>
                         </div>
-                        <button th:if="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="btn btn-success border border-dark rounded-0">Pay &#163;130</button>
-                        <button th:unless="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="btn btn-success border border-dark rounded-0">Pay &#163;65</button>
+                        <button th:if="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="btn-lg buttonsum text-black ">Pay &#163;1,000</button>
+                        <button th:unless="${fineAge > 28}" type="submit" th:href="@{/pay(id=${index})}" class="btn-lg buttonsum text-black">Pay &#163;1,000</button>
                     </div>
-                </form> 
+                </form>
+                <div th:each="row, iterStat: ${userfines}" class="card">
+                  <span class="card-body border border-dark rounded-0 mb-3">
+                    <p><span class="font-weight-bold"> If you are having trouble paying your license, click here to see additional payment plan options. </span></p>
+                    <a class="buttonsum text-black border-light btn-lg" onclick=" window.open('https://www.tvlicensing.co.uk/faqs/FAQ305','_blank')"> Payment Schemes </a>
+                  </span>
+              </div>
             </div>
         </div>
     </main>
